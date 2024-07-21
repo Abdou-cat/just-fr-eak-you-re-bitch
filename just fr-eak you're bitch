@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeated Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #output {
+            margin-top: 20px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Repeated Text</h1>
+    <div id="output"></div>
+    <script>
+        let count = 0;
+        const targetCount = 100;
+        const interval = 1000; // 1 second
+
+        function writeText() {
+            if (count < targetCount) {
+                document.getElementById('output').innerHTML += 'just fr-eak you\'re bitch<br>';
+                count++;
+            } else {
+                clearInterval(intervalId);
+            }
+        }
+
+        const intervalId = setInterval(writeText, interval);
+    </script>
+</body>
+</html>
